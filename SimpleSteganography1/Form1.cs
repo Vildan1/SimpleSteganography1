@@ -109,7 +109,7 @@ namespace SimpleSteganography
 
         private void button1_Click(object sender, EventArgs e)
         {
-            IPEndPoint iep = new IPEndPoint(IPAddress.Parse("192.168.43.133"), 13000);       // GÖNDEREN KİŞİ IP
+            IPEndPoint iep = new IPEndPoint(IPAddress.Parse(""), 13000);       // GÖNDEREN KİŞİ IP
             Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             server.Bind(iep);
             server.Listen(10);
@@ -128,7 +128,7 @@ namespace SimpleSteganography
         private void button2_Click(object sender, EventArgs e)
         {
 
-            IPEndPoint iep = new IPEndPoint(IPAddress.Parse("192.168.43.108"), 13000); //gönderen kisi ipsine bağlanılır
+            IPEndPoint iep = new IPEndPoint(IPAddress.Parse(""), 13000); //gönderen kisi ipsine bağlanılır
             using (Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
             {
                 try
